@@ -1,292 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>解敬巍 - 简历</title>
+    <title>Pa233</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-            color: #333;
+          font-family:'Lucida Console', monospace;
+          font-size: 18px;
+          color: #111;
+          background-color: white;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 50px;
+          box-sizing: border-box;
         }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+        .landing {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height:100vh; min-height:100dvh;
+          text-align: center;
         }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: 8px;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            font-size: 15px;
-            opacity: 0.9;
-        }
-        
-        .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .contact-info i {
-            font-size: 16px;
-        }
-        
-        .section {
-            padding: 30px 40px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .section:last-child {
-            border-bottom: none;
-        }
-        
-        .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #667eea;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
-            display: inline-block;
-        }
-        
-        .skills-list {
-            list-style: none;
-            counter-reset: skill-counter;
-        }
-        
-        .skills-list li {
-            counter-increment: skill-counter;
-            padding: 12px 0;
-            padding-left: 28px;
-            position: relative;
-            border-bottom: 1px dashed #eee;
-            line-height: 1.6;
-            font-size: 15px;
-            color: #444;
-        }
-        
-        .skills-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .skills-list li::before {
-            content: counter(skill-counter);
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 22px;
-            height: 22px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        .project {
-            margin-bottom: 25px;
-        }
-        
-        .project:last-child {
-            margin-bottom: 0;
-        }
-        
-        .project-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .project-title::before {
-            content: '▸';
-            color: #667eea;
-            font-size: 18px;
-        }
-        
-        .project-desc {
-            list-style: none;
-            padding-left: 20px;
-        }
-        
-        .project-desc li {
-            padding: 8px 0;
-            line-height: 1.7;
-            font-size: 15px;
-            color: #555;
-            position: relative;
-        }
-        
-        .project-desc li::before {
-            content: '•';
-            position: absolute;
-            left: -12px;
-            color: #667eea;
-        }
-        
-        .education {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #444;
-        }
-        
-        .self-eval {
-            font-size: 15px;
-            line-height: 1.9;
-            color: #444;
-            text-align: justify;
-        }
-        
-        @media (max-width: 600px) {
-            body {
-                padding: 15px;
-            }
-            
-            .header h1 {
-                font-size: 28px;
-                letter-spacing: 4px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-            
-            .section {
-                padding: 20px 25px;
-            }
-            
-            .skills-list li {
-                font-size: 14px;
-            }
-        }
-    </style>
+        svg { width: 100%; height: auto; }
+        .svg-container { width: 100%; max-width: 800px; display: inline-block; }
+        .separator { letter-spacing: -9px; }
+        hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 30px auto; }
+        .quiet, .links-container a { color: inherit; }
+        .links-container { font-size: 30px; margin: 20px;  }
+        .links-container a { text-decoration: none; margin: 20px 20px; }
+        .links-container2 a { color: inherit; }
+
+      </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>解敬巍</h1>
-            <div class="contact-info">
-                <span><i>📱</i> 手机：198-6374-7833</span>
-                <span><i>✉️</i> 邮箱：928477756@qq.com</span>
-                <span><i>🎂</i> 出生年月：2002.08</span>
-                <span><i>⏰</i> 到岗时间：两周内</span>
-            </div>
+    <div class="landing">
+        <div class="svg-container">
+        <svg  xmlns="http://www.w3.org/2000/svg">
+            <text x="420" y="130" font-size="80" text-anchor="middle" fill="#000000" >我自己</text>
+        </svg>
         </div>
-        
-        <div class="section">
-            <div class="section-title">个人技能</div>
-            <ul class="skills-list">
-                <li>熟悉渗透测试全流程（信息收集→漏洞探测→利用→提权→报告），可独立完成渗透测试。</li>
-                <li>掌握SQL注入（联合、报错、盲注）、文件上传（绕过、Webshell）、命令注入、目录遍历、XSS等常见漏洞的原理、手工利用与防御方法。</li>
-                <li>熟练使用Kali Linux，精通Burp Suite、Nmap、SQLMap、Metasploit、Dirsearch、ffuf等主流工具，能结合服务版本进行漏洞匹配与利用。</li>
-                <li>具备Python开发能力，可编写POC/EXP脚本，实现批量漏洞验证与复测。了解HTML，能进行基础Web安全测试与页面分析。</li>
-                <li>熟悉OWASP LLM Top 10风险（提示词注入、越权检索、系统Prompt泄露、工具调用滥用等）。</li>
-                <li>掌握RAG应用架构和Agent工具调用流程，了解用户输入、Prompt、知识库、模型输出之间的关系并可以根据功能需求对AI进行定制。具备AI辅助渗透测试经验，能搭建渗透测试型智能体，实现自主漏洞发现与报告生成。</li>
-                <li>可设计并实施基础防护：知识库权限隔离、输出内容审核、敏感词拦截、接口鉴权及调用审计。</li>
-                <li>熟悉Linux常用命令，能进行日志分析、基线检查以及Nginx、PHP-FPM、MySQL等服务加固。</li>
-                <li>了解堡垒机、防火墙、IDS/IPS、漏洞评估工具、防病毒系统等网络安全产品。</li>
-                <li>具备PHP代码审计基础，能发现CMS常见风险（调试模式暴露、备份文件泄露、弱token等）。</li>
-                <li>具备良好的测试报告编写与沟通能力，可清晰输出风险评级、复现步骤与修复方案，推动问题闭环。</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">项目经历</div>
-            
-            <div class="project">
-                <div class="project-title">AI辅助渗透测试智能体搭建</div>
-                <ul class="project-desc">
-                    <li>搭建了基于大模型的渗透测试型智能体，在无人工诱导的条件下对目标进行全流程自主渗透。</li>
-                    <li>智能体实现：自主发现漏洞→自动分类漏洞→生成测试报告并给出修复方案，显著提升自动化检测效率。项目中融合了提示词工程与工具调用链设计，加深了对AI安全和非确定性风险的理解。</li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">RAG智能问答系统安全评估（独立学习项目）</div>
-                <ul class="project-desc">
-                    <li>搭建基于大模型API与向量知识库的问答原型，梳理“用户提问→Prompt组装→知识检索→模型回复”的完整数据流与信任边界。</li>
-                    <li>成功通过提示词注入使模型泄露内部系统Prompt和无权查看的文档，并构造特殊提问实现知识库越权检索。并针对风险落实防护措施：按用户角色过滤检索结果、增加输出敏感词与违规内容审核、记录每次查询日志以便审计。通过此项目，建立了对AI应用非确定性风险的实战感知，能清晰说明与传统Web安全的差异。</li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">企业Web应用渗透测试（协作项目）</div>
-                <ul class="project-desc">
-                    <li>在授权范围内对门户站、后台管理系统及API接口进行信息收集、目录枚举、弱口令检查与常见漏洞验证。发现漏洞包括：SQL注入、越权查看、文件上传策略绕过、会话固定等，均定位复现路径并提供截图、风险评级与具体修复建议。</li>
-                    <li>协助开发侧完成整改复测，全程遵循最小化验证原则，避免破坏业务数据，具备交付正式安全测试报告的能力。</li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">渗透测试靶场实战（VulnHub / DVWA / SQLi-Labs）</div>
-                <ul class="project-desc">
-                    <li>在可控靶场中模拟真实渗透流程，完成多套Web应用与主机的漏洞挖掘与利用。通过使用Nmap进行扫描，手工测试各类SQL注入，在特定场景写入Webshell，使用Burp Suite抓包等操作对靶机进行渗透测试。</li>
-                    <li>用Python编写自动化检测脚本，提升漏洞批量验证与复测效率。</li>
-                </ul>
-            </div>
-            
-            <div class="project">
-                <div class="project-title">个人网站搭建与安全维护</div>
-                <ul class="project-desc">
-                    <li>通过腾讯云申请域名，使用Cloudflare实现域名代理与防护。使用HTML编写网站界面并部署至GitHub Pages，完成域名绑定与公网开放。负责站点日常安全维护，记录上传日志并对暴露面进行管理。</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">教育背景</div>
-            <div class="education">
-                青岛理工大学琴岛学院 · 软件工程 · 本科　2020.09 – 2024.06
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">自我评价</div>
-            <div class="self-eval">
-                持续关注Web安全与AI安全前沿技术，能够快速适配岗位要求并独立上手。抗压能力强，积极主动，热爱攻防类挑战性工作；沟通协调能力良好，善于推动项目落地与问题闭环。逻辑清晰，擅长结构化拆解复杂问题；兼具攻防实战与脚本开发能力，能在安全测试中兼顾效率与质量。对AI安全充满热情，习惯阅读最新安全博客和论文，持续跟进OWASP LLM Top 10和社区红队测试方法。
-            </div>
+        <div class="links-container">
+            <a href="#dotweb">pa233</a><span class="separator">|</span>
+            <a href="#docs">目前</a><span class="separator">|</span>
+            <a href="#work">正在</a><span class="separator">|</span>
+            <a href="#faq">存在</a>
         </div>
     </div>
+
     <div class=".links-container2">
 
         <h1>开源项目</h1>
@@ -303,5 +65,7 @@
 
         
     </div>
+
+
 </body>
 </html>
